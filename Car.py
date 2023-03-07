@@ -104,8 +104,3 @@
 # c.Car_Move()
 
 
-
-class method:
-    def __init__(self) -> None:
-        
-        self.n

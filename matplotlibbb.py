@@ -25,13 +25,13 @@ import matplotlib.pyplot as plt
 # import os
 #
 # print('likebaby.png' in os.listdir(os.getcwd()))
-
-
-
-iris = pd.read_csv('S:/csvfiles/iris.csv')
-iris = (iris.sample(5).replace({'Iris-setosa':0,
-                                'Iris-virginica':1,
-                                'Iris-versicolor':2}))
+#
+#
+# #
+# iris = pd.read_csv('S:/csvfiles/iris.csv')
+# iris = (iris.sample(5).replace({'Iris-setosa':0,
+#                                 'Iris-virginica':1,
+#                                 'Iris-versicolor':2}))
 # print(iris.shape)
 #
 #
@@ -40,9 +40,51 @@ iris = (iris.sample(5).replace({'Iris-setosa':0,
 # print(pd.concat([iris,iriss])['Id'].size)
 
 # print(iris)
-colors = ['r','g','b','y','p']
-plt.scatter(iris.SepalLengthCm,iris.PetalLengthCm,c=['g'])
-plt.show()
+# colors = ['r','g','b','y','p']
+# plt.scatter(iris.SepalLengthCm,iris.PetalLengthCm,c=['g'],alpha=0.2)
+
+
+
+
+# for x in ((zip(iris.SepalLengthCm,iris.PetalLengthCm))):
+#     plt.text(x=x[0],y=x[1],s='like')
+#
+# plt.xticks(rotation='vertical')
+# plt.axhline(4.9)
+# plt.axvline(5.6)
+
+
+# a = np.array([1,2,3,4])
+#
+# print(a[np.isnan(np.where(a%2==0,True,np.nan))==False])
+
+figure,subplott = plt.subplots(nrows=2,ncols=2)
+figure.show()
+# print(figure,subplott,sep='\n')
+#
+# print(iris)
+# subplott.scatter(iris.SepalLengthCm,iris.PetalLengthCm)
+# plt.show()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
