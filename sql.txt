@@ -1,0 +1,93 @@
+#sql commands
+		            1ST VIDEO
+#-------------------------------------------------------------------------------------------------
+
+0)show table & show databases;
+1) create table student(name varchar(255),sirname varchar(255));
+2) create database like_o
+3) drop table & drop database;
+4) select distinct name form student1;
+5) select count(distinct,name) from student1;
+6) insert into student1(name,sirname) values('Guru',"Mahendrakar");
+
+#------------------------------------------------------------------------------
+
+
+		             2ND VIDEO
+#---------------------------------------------------------------------------------------
+
+# alter commands
+
+
+# add your empty table
+alter table student1  add city varchar(255);
+
+
+# drop your single table
+alter table student1 drop column city;
+
+
+# table datatype change karna hai to ye use karo
+alter table student1 modify city varchar(int);
+
+
+#column ka position change karna ha to ye use karo
+alter table student1 modify city varchar(20) after name;
+
+# change column name
+alter table student1 change city town varchar(varchar15)
+
+# table name change
+alter table student1 rename stud1;
+
+#----------------------------------------------------------------------------------------------
+
+			3RD VIDEO   -	WHERE COMMANDS
+#-------------------------------------------------------------------------------------------------------
+
+
+1) select * from student1;
+2) select * from student1 where name='like';
+3) select * from student1 where id>2;
+4) select * from student1 where id<2 and i>3;
+5) select * from student1 where id not in ('guru','like');
+6) select * from student1 where id<> 3; # <> -> not equal work
+7) select * from student1 where sid betweeen 1 and 2 ;
+8) select * from student1 where sid in 'Guru';
+
+
+#-----------------------------------------------------------------------------------
+
+
+
+
+				4TH VIDEO - DELETE
+
+#----------------------------------------------------------------------------------------
+
+# table ke andar value delete karna hai to 
+delete from student1 where sid = '03';
+
+# delete complete table of values
+delete from student1 ;
+
+ # (all values delete this command)
+ truncate table student1;
+
+
+# to drop a column
+alter table student1 drop name;
+
+# to drop a table or databases
+drop table student1;
+
+# drop database school;
+
+
+
+
+
+
+
+
+#---------------------------------------------------------------------------------------------
