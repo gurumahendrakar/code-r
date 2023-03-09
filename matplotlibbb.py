@@ -121,14 +121,17 @@ df6 = pd.read_csv('s:/csvfiles/iris.csv')
 # # plt.axhline(150,color='red')
 # # plt.axvline(4000,color='yellow')
 # # plt.show()
+
+
+
 #
 #
+# figure,axis = plt.subplots(figsize=(10,10))
 #
-#
-# # figure,axis = plt.subplots(figsize=(10,10))
-# #
-# # print(p)
-#
+# figure.figsize = (10,10)
+
+
+
 #
 #
 # fig = plt.figure()
@@ -185,7 +188,7 @@ import matplotlib.pyplot as plt
 #
 #
 #
-# df = (df[(df.ballnumber<7) & (df.batsman_run==6)])
+df = (df[(df.ballnumber<7) & (df.batsman_run==6)])
 
 
 
@@ -194,7 +197,7 @@ import matplotlib.pyplot as plt
 # print(df.pivot_table(index='overs',columns='ballnumber')['batsman_run'])
 #
 #
-# a = (df.pivot_table(index='overs',columns='ballnumber',aggfunc='count')['batsman_run'])
+a = (df.pivot_table(index='overs',columns='ballnumber',aggfunc='count')['batsman_run'])
 #
 #
 # plt.imshow(a)
@@ -219,15 +222,8 @@ import matplotlib.pyplot as plt
 
 
 
-# df = pd.read_csv('s:/csvfiles/IPL_Ball_by_Ball_2008_2022.csv')
+df = pd.read_csv('s:/csvfiles/IPL_Ball_by_Ball_2008_2022.csv')
 
-
-# df = pd.DataFrame({'date':('5/1/2017','5/2/2017','5/3/2017','5/1/2017','5/2/2017',
-#                            '5/3/2017','5/3/2017','5/2/2017','5/5/2017'),
-#                    'city':('newyork','newyork','newyork','mumbai','mumbai','mumbai',
-#                     'bejing','bejing','bejing'),
-#                    'humidity':(56,58,60,80,83,85,26,30,35),
-#                    'tempreture':(65,66,68,75,78,82,80,77,79)})
 #
 #
 #
@@ -241,22 +237,225 @@ import matplotlib.pyplot as plt
 #
 #
 
+# #
+# df = pd.DataFrame({'date':('5/1/2017','5/2/2017','5/3/2017','5/1/2017','5/2/2017',
+#                            '5/3/2017','5/1/2017','5/2/2017','5/5/2017'),
+#                    'city':('newyork','newyork','newyork','mumbai','mumbai','mumbai',
+#                     'bejing','bejing','bejing'),
+#                    'humidity':(56,58,60,80,83,85,26,30,35),
+#                    'tempreture':(65,66,68,75,78,82,80,77,79),
+#                    'likes':(200,133,155,88,222,222,333,555,111)})
+
+
+# print(df,end='\n\n\n\n')
+#
+#
+#
+# print(df.pivot(index='date',columns='city')['likes'])
+# print()
+# print()
+# print(df.pivot(index='date',columns='city')['tempreture'])
+# print()
+# print()
+# print(df.pivot(index='date',columns='city')['humidity'])
+
+
+# arrayy_ = np.arange(0,8).reshape(2,4)
+# print(np.eye(2,3))
+# print(np.identity(8))
+
+# print(np.meshgrid(arrayy_)[0])
+# print(arrayy_)
+# print(np.append(arrayy_,[3,2]))
+# print(np.insert(arrayy_,0,[8,9,10,11]))
+
+
+# print(np.delete(arrayy_,[0,1,5]))
+#
+# #
+# # print(df.columns)
+# io = (df[(df['ballnumber']<7) & (df['batsman_run']==6)])
+#
+# print(io[['ballnumber','batsman_run','overs']].head(20))
+# print(io.pivot_table(index='overs',columns='ballnumber'))# print(io.pivot_table(index='overs',columns='ballnumber',aggfunc='count')['batsman_run'])
+
+
+
+# df2 = pd.DataFrame({'date':('5/1/2017','5/2/2017','5/3/2017','5/1/2017','5/2/2017',
+#                            '5/3/2017','5/1/2017','5/2/2017','5/5/2017'),
+#                    'city':('newyork','newyork','newyork','mumbai','mumbai','mumbai',
+#                     'bejing','bejing','bejing'),
+#                    'humidity':(56,58,60,80,83,85,26,30,35),
+#                    'tempreture':(65,66,68,75,78,82,80,77,79),
+#                    'likes':(200,133,155,88,222,222,333,555,111)})
+#
+#
+# # print(df)
+# # #
+# # print(df.pivot(index='city',columns='date',))
+# #
+# #
+# # print(df.pivot_table(index='date',columns='city',aggfunc='count'))
+#
+# print(df.columns)
+# ioup = (df[(df['ballnumber']<7) & (df['batsman_run']==6)])
+
+
+
+
+# x = (ioup.groupby('ballnumber')['ballnumber'])
+#
+#
+# for xx in x:
+#     print(xx)
+#     break
+
+
+
+
+#--------------------------------------important start------------------------------------------------------------------
+
+
+
+
+#........ mathoplotlib
+#   line_plot
+#   bar chart
+#   scatter chart
+#   histogram
+#   Pie Chart
+
+
+
+# plotsize
+#horizontal lines axhline & axvline
+
+#-----------------------------------------------------------------------------------------------------------------------
+# subplots()
+# """
+#                                 <<Figure>>
+#
+#             fig = plt.figure()
+#             fig.add_subplot(21)
+#
+# """
+#---------------------------------------------------------------------------------------------------------
+
+
+# 3rd  subplot(project = 3d)
+#
+#
+# a = np.linspace(-10,10,100)
+# b = np.linspace(-10,10,100)
+# c = a**10 + a**10
+#
+#
+# d = plt.subplot(projection='3d')
+#
+# l = d.scatter3D(a,b,c,c=a,cmap='viridis')
+# plt.colorbar(l)
+# # plt.show()
+# print(df5)
+# (df5.plot(kind='line',subplots=True))
+# plt.show()
+
+#
+# a = np.arange(0,50)
+# print(sum(a)/len(a))
+# print(a.mean())
 
 
 
 
 
 
+# print(df5.plot(kind='bar',stacked=True))
+
+# df5[['2015','2016','2017']].plot(kind='pie',autopct='%0.1f%%',subplots=True,legend=False)
+#
+# plt.show()
+#
+
+
+
+#---------------------------------Seaborn---------------------------------------------------------
+
+
+
+import pandas as pd
+import numpy as np
+import seaborn as sea
+import plotly.express as exp
 
 
 
 
 
 
+# relplot -> figure level function
+# axis is -> axis level function 🤣🤣🤣🤣
+#
+# data = sea.load_dataset("tips")
+#
+# io = sea.scatterplot(data=data,x='total_bill',y='tip',hue='sex')
+#
+#
+#
+# relplott = sea.relplot(data=data,kind='scatter',x='total_bill',y='tip',hue='sex',
+#                        style='time',
+#                        size='size'
+#                        )
+
+# plt.text(data.total_bill[0],data.tip[0],'like')
+
+
+gap = exp.data.gapminder()
+# print(gap.total_bill)
+# gap = (gap[gap['country'].isin(['India',"Brazil","Usa","Germany"])])
 
 
 
 
+# axis level function
+
+# sea.lineplot(data=gap,x='year',y='lifeExp',markers='*',color='greenyellow')
+#
+# sea.relplot(data=gap, kind='line',x='year',y='lifeExp',markers='*',color='greenyellow')
+
+# print(gap.columns)
+
+
+#
+# sea.relplot(data=gap, kind='scatter',
+#             x='year',
+#             y='lifeExp',
+#
+#             hue='country',
+#             style='continent',
+#             col='year',
+#             size= np.arange(gap.shape[0]),
+#             col_wrap=3
+#             )
+#
+
+# data = pd.DataFrame({'1lack':[100000]*4,
+#                   '2lakh':[200000]*4,
+#                   '3lakh':[300000]*4,
+#                   '4lakh':[400000]*4})
+#
+# print(data)
+# sea.histplot(data=data,x='1lack')
+#
+# # print(gap.columns)
+# plt.show()
+
+
+
+
+print(df5)
+
+
+plt.show()
 
 
 

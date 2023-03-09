@@ -382,30 +382,30 @@
 # # print(np.sum(np.isnan(a)))
 #
 #
+import numpy as np
+# # # one_d = np.array([1,2,3,4,5])
+# # # two_d = np.arange(0,12).reshape(3,4)
+# three_d = np.arange(18).reshape(3,2,3)
+# print(three_d)
+# print()
+# print()
+# print(three_d+[[[10],[20]]])
 #
-# # one_d = np.array([1,2,3,4,5])
-# # two_d = np.arange(0,12).reshape(3,4)
-# # three_d = np.arange(18).reshape(3,2,3)
+# a = np.arange(0,8).reshape(2,4)
+# print(a)
+# print(np.concatenate((a,a),axis=1))
+#
+#
+# print()
+# print()
+# #
+# print(np.concatenate((three_d,[[[2,3,4]],
+#                                [[2,3,4]],
+#                                [[2,3,4]]]),axis=1))
+#
+#
 # # print(three_d)
-# # print()
-# # print()
-# # print(three_d+[[[10],[20]]])
-#
-# # a = np.arange(0,8).reshape(2,4)
-# # print(a)
-# # print(np.concatenate((a,a),axis=1))
-# #
-# #
-# # print()
-# # print()
-# #
-# # print(np.concatenate((three_d,[[[2,3,4]],
-# #                                [[2,3,4]],
-# #                                [[2,3,4]]]),axis=1))
-#
-#
-# # print(three_d)
-# # print(np.sum(three_d,axis=1))
+# print(np.min(three_d,axis=1))
 #
 #
 # #--------------------------------------------------------------------------------------------------------------------------------------------------
@@ -421,11 +421,11 @@
 # # b = np.random.choice(np.arange(0,3),
 # #                      size=3,
 # #                      replace=False) #replace = False karne se same value nahi return nahi karta hai
-#
-# # c = (np.random.randint(low=[200,500],
-# #                        high=[300,800],
-# #                        size=(4,2)))
-#
+
+# c = (np.random.randint(low=[200,500],
+#                        high=[300,800],
+#                        size=(4,2)))
+# print(c)
 #
 #
 # # d = (np.random.randint(low=0,
@@ -434,22 +434,23 @@
 #
 # #                        size=(2,)))
 #
-#
+
+
+# e = np.random.uniform(low=200,
+#                       high=500,
+#                       size=(2,2,3))
 # #
-# # e = np.random.uniform(low=200,
-# #                       high=500,
-# #                       size=(2,2,3))
+# print(e)
 #
-# print()
+# f = (np.random.choice(a=10,
+#                       size=(2,3)))
+# print(f)
+# genrator = np.random.default_rng(seed=222)
+# g = genrator.integers(low=0,
+#                       high=8,
+#                       size=8)
 #
-# # f = (np.random.choice(a=10,
-# #                       size=(2,3)))
-#
-# # genrator = np.random.default_rng(seed=222)
-# # g = genrator.integers(low=0,
-# #                       high=8,
-# #                       size=8)
-#
+# print(g)
 # a = [1,2,3,4]
 # # h = np.random.shuffle([1,2,3,4])
 # # print(h)
@@ -604,7 +605,7 @@
 #     # print(three_d)
 #     # print(three_d.transpose()) # (row ka column) (column to row)
 #     #
-#     # print(np.hstack((two_d,two_d))) # rows same hone change columns se farak nahi padta
+#     # print(np.hstack((two_d,two_d))) # rows same hone change columns se farak nahi padta -> original me 4 column dursr me 2 column bus shape same hone chahiye
 #     # print(np.vstack((two_d,[1,2,3,4]))) # v stack me columns matter karenge
 #
 #     # print(np.vsplit(two_d,2)[1]) # rows wise split
@@ -617,10 +618,10 @@
 #     # #
 #     # #
 #     # print(np.where(two_d%2==0))
-#     #
-#     # print(np.unique(['A',"A","A"],
-#     #                 return_counts=True,
-#     #                 return_index=True))
+
+# print(np.unique(['A',"b","c",'A'],
+#                     return_counts=True,
+#                     return_index=True))
 #     #
 #     # a = np.random.random((2, 2))
 #     # b = np.random.rand(3, 2)
@@ -634,7 +635,8 @@
 # import  numpy
 # from pprint import pprint
 #
-# # l = np.arange(0,16).reshape(2,2,4)
+# l = np.arange(0,16).reshape(2,2,4)
+# print(l)
 # # ll  = np.arange(0,8).reshape(2,4)
 # # print(a)
 # # print()
@@ -645,7 +647,7 @@
 # # print(np.percentile(ll,100))
 # # print(np.histogram(l,bins=[0,10,20,30,40]))
 # # print(np.isin([1,2,3,4,5,6],[1,2,3,4,5]))
-# # print(np.flip(l))
+# print(np.flip(l))
 # # np.put(l,[0,1],[555,1000])
 # # print(np.clip(ll,a_min=2,a_max=3))
 #
@@ -799,6 +801,8 @@ two_d = [[1,8,3,2],
 
 
 """
+
+
 size itemsize ndim shape dtype astype fill full transpose linspace random shutffle nan round abs copy identity eye vstack hstack concatinate
 strides fill_diagonal
 
@@ -809,9 +813,12 @@ def lambda class while for and or not in is if elif else  continue break assert 
 finally return yield 
 
 
+
 list 
 tuple dict set string float int frozenset tuple set 
 
+
+..............packing & unpacking...............
 
 arthemetic
 assignment operators
@@ -821,7 +828,13 @@ logical operators
 bitwise operators
 identity operators
 
+
+
+.......dataframe..........
 name index colums is_unique shape keys 
+
+
+
 """
 
 
